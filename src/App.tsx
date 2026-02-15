@@ -10,6 +10,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Toaster } from '@/components/ui/toaster'
 import { Product } from '@/containers/Product'
 import { Stats } from '@/containers/Stats'
+import { TelegramChromeSync } from './components/ui/telegram-chrome-sync'
 
 function BackButtonBridge() {
   const location = useLocation()
@@ -47,6 +48,7 @@ function App() {
     <Box w="100vw" h="100vh">
       <QueryClientProvider client={queryClient}>
         <Toaster />
+        <TelegramChromeSync />
         <Container maxW="container.md" py={8}>
           <MemoryRouter>
             <BackButtonBridge />
