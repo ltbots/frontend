@@ -1,4 +1,4 @@
-import { useRawInitData } from '@telegram-apps/sdk-react';
+import { useRawInitData } from '@tma.js/sdk-react';
 import {
     Configuration,
     ControllerApi

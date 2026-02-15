@@ -1,4 +1,4 @@
-import { useLaunchParams, type User } from "@telegram-apps/sdk-react"
+import { useLaunchParams, type User } from "@tma.js/sdk-react"
 import { AvatarHeader } from "./ui/avatar-header"
 import { useTranslation } from "react-i18next"
 
