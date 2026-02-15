@@ -99,5 +99,9 @@
     },
     "error": {
         "unknown": "An unknown error occurred"
+    },
+    "browser": {
+        "title": "Open this app in Telegram",
+        "body": "This app must be opened inside Telegram (as a Mini App). It will not work in a regular browser."
     }
 }

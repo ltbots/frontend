@@ -3,7 +3,8 @@ import { createRoot } from 'react-dom/client'
 import { Provider } from "./components/ui/provider"
 import './index.css'
 import App from './App.tsx'
-import { init } from '@telegram-apps/sdk-react';
+import { init, isTMA } from '@telegram-apps/sdk-react';
+import WebApp from './WebApp.tsx'
 
 const initializeTelegramSDK = () => {
   try {
@@ -14,12 +15,16 @@ const initializeTelegramSDK = () => {
   }
 }
 
-initializeTelegramSDK()
+const inTelegram = isTMA()
+
+if (inTelegram) {
+  initializeTelegramSDK()
+}
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider>
-      <App />
+      {inTelegram ? <App /> : <WebApp />}
     </Provider>
   </StrictMode>,
 )
