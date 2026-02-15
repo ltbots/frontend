@@ -31,11 +31,7 @@ export default defineConfig({
             return 'libs'
           }
 
-          if (id.includes('/src/containers/')) {
-            return 'index'
-          }
-
-          return
+          return 'index'
         },
       },
     },
