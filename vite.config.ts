@@ -19,23 +19,6 @@ export default defineConfig({
       },
     },
   },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes('/node_modules/react/') || id.includes('/node_modules/react-dom/')) {
-            return 'react'
-          }
-
-          if (id.includes('/node_modules/')) {
-            return 'libs'
-          }
-
-          return 'index'
-        },
-      },
-    },
-  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
