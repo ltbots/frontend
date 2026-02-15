@@ -27,32 +27,12 @@ export default defineConfig({
             return 'react'
           }
 
-          if (id.includes('/node_modules/@tanstack/')) {
-            return 'tanstack'
-          }
-
-          if (id.includes('/node_modules/@chakra-ui/charts/')) {
-            return 'chakra-charts'
-          }
-
-          if (id.includes('/node_modules/@chakra-ui/')) {
-            return 'chakra'
-          }
-
-          if (id.includes('/node_modules/@zag-js/')) {
-            return 'zag-js'
-          }
-
-          if (id.includes('/node_modules/@tma.js/')) {
-            return 'tmajs'
-          }
-
-          if (id.includes('/node_modules/@ltbots/api')) {
-            return 'api'
+          if (id.includes('/node_modules/')) {
+            return 'libs'
           }
 
           if (id.includes('/src/containers/')) {
-            return 'containers'
+            return 'index'
           }
 
           return
